@@ -1,4 +1,4 @@
-let videos = [
+let ytVideos = [
     {
     title: "100+ JavaScript Concepts you Need to Know",
     channel: "FireShip",
@@ -32,11 +32,11 @@ function fillSynopsis() {
     var tRowSynopsis = "<tr class='synopsisRow'>";
     var tRowButton = "<tr class='synopsisRow'>";
 
-    for(var i = 0; i < videos.length; i++) {
-        tRowTitle = tRowTitle.concat("<th><h2 class='synopsisTitle'>" + videos[i].title + "</h2></th>");
-        tRowChannel = tRowChannel.concat("<td><h3 class='synopsisChannel'>" + videos[i].channel + "</h3></td>");
-        tRowSynopsis = tRowSynopsis.concat("<td class='synopsisText'>" + videos[i].synopsis + "</td>");
-        tRowButton = tRowButton.concat("<td><button onclick='changeView(\"" + videos[i].link + "\")' class='synopsisButton'>Watch This!</button></td>");
+    for(var i = 0; i < ytVideos.length; i++) {
+        tRowTitle = tRowTitle.concat("<th><h2 class='synopsisTitle'>" + ytVideos[i].title + "</h2></th>");
+        tRowChannel = tRowChannel.concat("<td><h3 class='synopsisChannel'>" + ytVideos[i].channel + "</h3></td>");
+        tRowSynopsis = tRowSynopsis.concat("<td class='synopsisText'>" + ytVideos[i].synopsis + "</td>");
+        tRowButton = tRowButton.concat("<td><button onclick='changeView(\"" + i + "\")' class='synopsisButton'>Watch This!</button></td>");
     }
 
     tRowTitle = tRowTitle.concat("</tr>");
@@ -51,12 +51,12 @@ function fillSynopsis() {
 
     stringObject = stringObject.concat("</table>");
     tableObject.innerHTML = stringObject;
+
+    changeView("0");
 }
 
-function changeView(link) {
-    var newLink = link.concat("?autoplay=1");
-    var video = document.getElementById("pg1Video");
-    video.src = newLink;
+function changeView(index) {
+    var vLink = ytVideos[index].link.concat("?autoplay=1");
+    var vFrame = document.getElementById("pg1Video");
+    vFrame.src = vLink;
 }
-
-changeView(videos[0].link);

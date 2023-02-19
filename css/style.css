@@ -41,7 +41,7 @@ div#main-footer {
     font-family: 'Courier Prime', monospace;
 }
 
-div#main-body, div#main-body * {
+div#main-body {
     background-color: lightgray;
 }
 
@@ -116,4 +116,12 @@ tr.synopsisRow td, tr.synopsisRow.th {
 
 .synopsisButton {
     width: 100%;
+    background-color: darkgreen;
+    color: lightgray;
+}
+
+.synopsisButton:hover {
+    width: 100%;
+    background-color: darkblue;
+    color: lightgray;
 }
