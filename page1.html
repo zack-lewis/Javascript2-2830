@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Dancing+Script:wght@500&display=swap" rel="stylesheet"> 
         <link href="css/style.css" rel="stylesheet">
+        <script src="functions.js"></script>
     </head>
     <body>
         <div id="main-header">
@@ -28,7 +29,10 @@
                 </ul>
             </div>
             <div id="body-content" class="body-row1">
-                <h1>Click the links on the left to view videos!</h1>
+                <iframe id="pg1Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>Unable to display video</iframe>
+                <table id="synopsis" style="border: 1px solid red">
+                    
+                </table>
             </div>
         </div>
         <div id="main-footer">
@@ -45,5 +49,8 @@
                 </tr>
             </table>
         </div>
+        <script>
+            fillSynopsis();
+        </script>
     </body>
 </html>

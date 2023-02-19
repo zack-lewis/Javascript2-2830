@@ -25,9 +25,14 @@ div#main-header {
 h1#heading {
     font-family: 'Dancing Script', cursive;
     text-align: right;
-    margin-top: 0px;
+    margin-top: 0px; 
     padding-right: 20px;
     font-size: 4vw;
+}
+
+h1.content-heading {
+    padding: 0px;
+    margin-top: 0px;
 }
 
 div#main-footer {
@@ -75,4 +80,13 @@ a {
 #nav-current {
     text-decoration: underline;
     font-style: oblique;
+}
+
+iframe#pg1Video {
+    height: 315px;
+    width: 560px;
+}
+
+.synopsisTitle {
+    text-align: center;
 }
