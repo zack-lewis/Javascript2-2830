@@ -125,3 +125,50 @@ tr.synopsisRow td, tr.synopsisRow.th {
     background-color: darkblue;
     color: lightgray;
 }
+
+video#body-video {
+    border: 1px solid black;
+    width: 500px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+div#videoDisplay {
+    display: block;
+}
+
+button.ctrlBtn {
+    width: 150px;
+    height: 30px;
+}
+
+#blank {
+    width: 20%;
+}
+
+#rtSidebar {
+    width: 100%;
+}
+
+#rtSidebar div {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.sizeBtn, .prevBtn{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+}
+
+.rtSideBar h3 {
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

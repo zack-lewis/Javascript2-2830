@@ -8,8 +8,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Dancing+Script:wght@500&display=swap" rel="stylesheet"> 
         <link href="css/style.css" rel="stylesheet">
+        <script src="pg2functions.js"></script>
     </head>
-    <body>
+    <body onload="initLoad()">
         <div id="main-header">
             <h1 id="heading">Zack's Useless Knowledge Emporium</h1>
         </div>
@@ -28,7 +29,29 @@
                 </ul>
             </div>
             <div id="body-content" class="body-row1">
-
+                <table>
+                    <tr>
+                        <td id="blank"></td>
+                        <td id="videoDisplay">
+                            <video id="body-video">
+                                <source src="" type="video/mp4" />
+                            </video>
+                            <button id="playpause" class="ctrlBtn">Play</button>
+                        </td>
+                        <td id="rtSidebar">
+                            <div id="sizeAdj" class="rtSideBar">
+                                <h3>Size Adjustment</h3>
+                                <button id="smallBtn" class="sizeBtn" onclick="changeVideoSize('s')">Small</button> 
+                                <button id="medBtn" class="sizeBtn" onclick="changeVideoSize('m')">Medium</button> 
+                                <button id="largeBtn" class="sizeBtn" onclick="changeVideoSize('l')">Large</button>
+                            </div>
+                            <br />
+                            <div id="previews" class="rtSideBar">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div id="main-footer">
