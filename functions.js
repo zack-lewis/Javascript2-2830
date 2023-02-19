@@ -26,17 +26,30 @@ let videos = [
 
 function fillSynopsis() {
     var tableObject = document.getElementById("synopsis");
-    var stringObject = "<tr> <!-- Auto Generated -->";
+    var stringObject = "<table> <!-- Auto Generated -->";
+    var tRowTitle = "<tr class='synopsisRow'>";
+    var tRowChannel = "<tr class='synopsisRow'>";
+    var tRowSynopsis = "<tr class='synopsisRow'>";
+    var tRowButton = "<tr class='synopsisRow'>";
+
     for(var i = 0; i < videos.length; i++) {
-        stringObject = stringObject.concat("<td>");
-        stringObject = stringObject.concat("<h2 class='synopsisTitle'>" + videos[i].title + "</h2>");
-        stringObject = stringObject.concat("<h3 class='synopsisChannel'>" + videos[i].channel + "</h3>");
-        stringObject = stringObject.concat(videos[i].synopsis);
-        stringObject = stringObject.concat("<hr /><button onclick='changeView(\"" + videos[i].link + "\")'>Watch This!</button>");
-        stringObject = stringObject.concat("</td>");
+        tRowTitle = tRowTitle.concat("<th><h2 class='synopsisTitle'>" + videos[i].title + "</h2></th>");
+        tRowChannel = tRowChannel.concat("<td><h3 class='synopsisChannel'>" + videos[i].channel + "</h3></td>");
+        tRowSynopsis = tRowSynopsis.concat("<td class='synopsisText'>" + videos[i].synopsis + "</td>");
+        tRowButton = tRowButton.concat("<td><button onclick='changeView(\"" + videos[i].link + "\")' class='synopsisButton'>Watch This!</button></td>");
     }
 
-    stringObject = stringObject.concat("</tr>");
+    tRowTitle = tRowTitle.concat("</tr>");
+    tRowChannel = tRowChannel.concat("</tr>");
+    tRowSynopsis = tRowSynopsis.concat("</tr>");
+    tRowButton = tRowButton.concat("</tr>");
+
+    stringObject = stringObject.concat(tRowTitle);
+    stringObject = stringObject.concat(tRowChannel);
+    stringObject = stringObject.concat(tRowSynopsis);
+    stringObject = stringObject.concat(tRowButton);
+
+    stringObject = stringObject.concat("</table>");
     tableObject.innerHTML = stringObject;
 }
 
