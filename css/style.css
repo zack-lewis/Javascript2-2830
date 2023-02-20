@@ -153,7 +153,6 @@ button.ctrlBtn {
 
 #rtSidebar div {
     width: 100%;
-    /* border: 1px solid red; */
 }
 
 .sizeBtn, .prevBtn{
@@ -171,4 +170,14 @@ button.ctrlBtn {
     width: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+button#backBtn {
+    position: absolute;
+    top: 108px;
+    right: 110px;
+    background-color: lime;
+    font-size: xx-large;
+    width: 100px;
+    height: 50px;
 }

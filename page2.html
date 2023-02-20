@@ -13,6 +13,7 @@
     <body onload="initLoad()">
         <div id="main-header">
             <h1 id="heading">Zack's Useless Knowledge Emporium</h1>
+            <button onclick="document.location = 'index.html'" id="backBtn">BACK</button>
         </div>
         <div id="main-body">
             <div id="body-nav" class="body-row1">
@@ -33,10 +34,11 @@
                     <tr>
                         <td id="blank"></td>
                         <td id="videoDisplay">
-                            <video id="body-video">
-                                <source src="" type="video/mp4" />
+                            <video id="body-video" autoplay="autoplay" controls="controls">
+                                Your browser is unsupported. Try a real one.
                             </video>
-                            <button id="playpause" class="ctrlBtn">Play</button>
+                            <button id="playpause" class="ctrlBtn" onclick="togglePlay()">Play</button>
+                            <h3 id="bufferBar"></h3>
                         </td>
                         <td id="rtSidebar">
                             <div id="sizeAdj" class="rtSideBar">
